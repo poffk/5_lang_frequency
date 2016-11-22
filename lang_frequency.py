@@ -11,7 +11,7 @@ def load_data(filepath):
 
 
 def get_most_frequent_words(text):
-    text.lower()
+    text = text.lower()
     refined_text = re.findall(r'[^ \W|\d]+', text)
     counter = Counter(refined_text)
     return counter.most_common(NUMBER_OF_OUTPUT_WORDS)
